@@ -1,0 +1,782 @@
+Aqui está o código HTML atualizado com a imagem fornecida substituindo a imagem da página principal (na seção **Hero**, substituindo a foto anterior por esta imagem do consultório/quadro "Van PsicoVida").
+
+Como você não especificou uma URL pública para a imagem enviada, utilizei um placeholder (`SUA_IMAGEM_AQUI.jpg`) no código. Basta substituir esse trecho pelo link direto ou nome do arquivo da imagem que você está utilizando:
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Van PsicoVida | Vanessa Sena Pina Miranda - Psicóloga</title>
+    <!-- FontAwesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Variáveis de Cores e Configurações Gerais */
+        :root {
+            --bg-primary: #fcfbfa;
+            --bg-secondary: #f4f0ec;
+            --bg-card: #ffffff;
+            --text-primary: #2c2a29;
+            --text-secondary: #6e6865;
+            --accent-color: #7d6b5d;
+            --accent-hover: #635347;
+            --border-color: #e3ded8;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            --transition: all 0.3s ease;
+        }
+
+        .dark {
+            --bg-primary: #181716;
+            --bg-secondary: #22201e;
+            --bg-card: #2c2a29;
+            --text-primary: #f4f0ec;
+            --text-secondary: #b5afa9;
+            --accent-color: #a49182;
+            --accent-hover: #bda897;
+            --border-color: #3b3835;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            transition: var(--transition);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Botões */
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--text-primary);
+            padding: 0.75rem 1.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            border: 2px solid var(--accent-color);
+            transition: var(--transition);
+            display: inline-block;
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--accent-color);
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--bg-primary);
+            box-shadow: var(--shadow);
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .nav-menu a:hover {
+            color: var(--accent-color);
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .theme-btn {
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-size: 1.2rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+
+        .theme-btn:hover {
+            background-color: var(--bg-secondary);
+        }
+
+        .menu-hamburger {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 160px 0 100px;
+            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 4rem;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: var(--bg-secondary);
+            color: var(--accent-color);
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .hero-text h1 {
+            font-size: 2.8rem;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .hero-text p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 450px;
+            border-radius: 20px;
+            object-fit: cover;
+            box-shadow: var(--shadow);
+        }
+
+        /* Sobre Mim */
+        .about {
+            padding: 100px 0;
+            background-color: var(--bg-secondary);
+        }
+
+        .about-container {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+        }
+
+        .about-image {
+            flex: 1;
+        }
+
+        .about-image img {
+            width: 100%;
+            max-width: 450px;
+            border-radius: 20px;
+            object-fit: cover;
+            box-shadow: var(--shadow);
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .highlight-quote {
+            font-size: 1.2rem;
+            font-style: italic;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .about-text p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .crp-info {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            background-color: var(--bg-card);
+            padding: 1rem;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+            width: fit-content;
+        }
+
+        .crp-info i {
+            color: var(--accent-color);
+            font-size: 1.2rem;
+        }
+
+        /* Propósito e Benefícios */
+        .purpose {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title p {
+            color: var(--text-secondary);
+        }
+
+        .purpose-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .purpose-card {
+            background-color: var(--bg-card);
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+
+        .purpose-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .purpose-card i {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .purpose-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .purpose-card p {
+            color: var(--text-secondary);
+        }
+
+        /* Cartões de Serviços/Diferenciais (4 Cards) */
+        .services {
+            padding: 100px 0;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background-color: var(--bg-card);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent-color);
+        }
+
+        .icon-box {
+            width: 70px;
+            height: 70px;
+            background-color: var(--bg-secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: var(--accent-color);
+            font-size: 1.8rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Rodapé */
+        .footer {
+            background-color: var(--bg-secondary);
+            padding: 80px 0 30px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-info h3 span {
+            color: var(--accent-color);
+        }
+
+        .footer-info p {
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .crp-footer {
+            font-weight: 600;
+            color: var(--accent-color) !important;
+        }
+
+        .footer-links h4, .footer-social h4 {
+            font-size: 1.1rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-color);
+            padding-left: 5px;
+        }
+
+        .footer-social p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-icons a {
+            width: 40px;
+            height: 40px;
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-icons a:hover {
+            background-color: var(--accent-color);
+            color: #fff;
+            border-color: var(--accent-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* WhatsApp Flutuante */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background-color: #25d366;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            background-color: #20ba5a;
+        }
+
+        /* Responsividade */
+        @media (max-width: 992px) {
+            .hero-content, .about-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .crp-info {
+                margin: 0 auto;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background-color: var(--bg-primary);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 2rem;
+                transition: var(--transition);
+                box-shadow: var(--shadow);
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .menu-hamburger {
+                display: block;
+            }
+
+            .cta-desktop {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-text h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho (Header) -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="#" class="logo">Van <span>PsicoVida</span></a>
+            <nav class="nav-menu" id="navMenu">
+                <a href="#inicio">Início</a>
+                <a href="#sobre">Sobre Mim</a>
+                <a href="#abordagem">Abordagem</a>
+                <a href="#servicos">Diferenciais</a>
+                <a href="#contato">Contato</a>
+            </nav>
+            <div class="header-actions">
+                <button id="themeToggle" class="theme-btn" aria-label="Alternar modo escuro/claro">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <a href="https://wa.me/5511982073795?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20atendimentos." target="_blank" class="btn-primary cta-desktop">Fale Conosco</a>
+                <button class="menu-hamburger" id="menuHamburger" aria-label="Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Banner Principal (Hero Section) -->
+    <section id="inicio" class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <span class="badge">CRP 55819</span>
+                <h1>Cuidando da sua saúde mental com acolhimento e excelência</h1>
+                <p>Um espaço seguro para o seu autoconhecimento, desenvolvimento emocional e ressignificação de histórias.</p>
+                <div class="hero-buttons">
+                    <a href="https://wa.me/5511982073795?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" class="btn-primary">Agendar Consulta</a>
+                    <a href="#sobre" class="btn-secondary">Conhecer a Psicóloga</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="Foto Topo.jpg" alt="Consultório Van PsicoVida" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Apresentação Pessoal -->
+    <section id="sobre" class="about">
+        <div class="container about-container">
+            <div class="about-image">
+                <img src="Foto sobre mim.jpeg" alt="Vanessa Pina" />
+            </div>
+            <div class="about-text">
+                <h2>Sobre Mim</h2>
+                <p class="highlight-quote">"Prazer, Sou Vanessa Pina, sua psicóloga. Amo Psicologia e atuar com Psicoterapia Individual me faz feliz a cada dia."</p>
+                <p>Nas sessões ouço, oriento, acompanho e trato pessoas com diversas situações de alma à resolver. Atuo em Psicoterapia há mais de 14 anos e realizo atendimentos particulares 100% on-line.</p>
+                <div class="crp-info">
+                    <i class="fa-solid fa-id-card"></i>
+                    <span>Vanessa Sena Pina Miranda | <strong>CRP 55819</strong></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Propósito e Benefícios -->
+    <section id="abordagem" class="purpose">
+        <div class="container">
+            <div class="section-title">
+                <h2>Propósito e Benefícios</h2>
+                <p>Por que a psicoterapia é fundamental para a sua jornada?</p>
+            </div>
+            <div class="purpose-grid">
+                <div class="purpose-card">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                    <h3>Apoio Emocional Especializado</h3>
+                    <p>A Psicoterapia auxilia as pessoas a lidarem com problemas emocionais, comportamentais, ansiedade, estresse e conflitos internos, promovendo clareza mental e autoconhecimento profundo.</p>
+                </div>
+                <div class="purpose-card">
+                    <i class="fa-solid fa-seedling"></i>
+                    <h3>Equilíbrio e Bem-Estar</h3>
+                    <p>Nota-se grande necessidade das pessoas em adquirir equilíbrio emocional para enfrentar os desafios cotidianos com mais leveza, resiliência e qualidade de vida.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cartões de Serviços/Diferenciais (4 Cards) -->
+    <section id="servicos" class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Pilares do Atendimento</h2>
+                <p>Diferenciais que garantem um tratamento ético, humanizado e eficaz</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="icon-box"><i class="fa-solid fa-user-doctor"></i></div>
+                    <h3>Psicoterapia Individual</h3>
+                    <p>Espaço dedicado ao autoconhecimento, tratamento de fobias, depressão, ansiedade e conflitos pessoais com foco no seu ritmo.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon-box"><i class="fa-solid fa-laptop-medical"></i></div>
+                    <h3>Atendimento 100% On-line</h3>
+                    <p>Horário de atendimento: 07:00 às 18:00.</p>
+                    <p>Atendimentos realizados com privacidade e conforto pela internet, a partir de qualquer lugar.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon-box"><i class="fa-solid fa-award"></i></div>
+                    <h3>Mais de 14 Anos</h3>
+                    <p>Experiência sólida consolidada em atendimento clínico particular e convênios, prestando um serviço ético e transformador.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon-box"><i class="fa-solid fa-scale-balanced"></i></div>
+                    <h3>Equilíbrio Emocional</h3>
+                    <p>Ferramentas e suporte psicológico para resgatar sua paz interior, inteligência emocional e qualidade de vida nas relações.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé (Footer) -->
+    <footer id="contato" class="footer">
+        <div class="container footer-grid">
+            <div class="footer-info">
+                <h3>Van <span>PsicoVida</span></h3>
+                <p>Vanessa Sena Pina Miranda</p>
+                <p class="crp-footer">CRP: 55819</p>
+                <p><i class="fa-brands fa-instagram"></i> psicologa_vanessapina</p>
+                <p><i class="fa-brands fa-whatsapp"></i> 11 98207-3795</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navegação</h4>
+                <a href="#inicio">Início</a>
+                <a href="#sobre">Sobre Mim</a>
+                <a href="#abordagem">Abordagem</a>
+                <a href="#servicos">Diferenciais</a>
+            </div>
+            <div class="footer-social">
+                <h4>Contato</h4>
+                <p>Acompanhe meu trabalho e entre em contato pelos canais abaixo.</p>
+                <div class="social-icons">
+                    <a href="https://instagram.com/psicologa_vanessapina" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/5511982073795" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Van PsicoVida - Todos os direitos reservados. Desenvolvido para Vanessa Pina.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Flutuante -->
+    <a href="https://wa.me/5511982073795?text=Olá,%20gostaria%20de%20tirar%20dúvidas%20sobre%20a%20psicoterapia." class="whatsapp-float" target="_blank" aria-label="Fale pelo WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Script JavaScript Incorporado -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Menu Mobile (Hamburger)
+            const menuHamburger = document.getElementById('menuHamburger');
+            const navMenu = document.getElementById('navMenu');
+
+            menuHamburger.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                const icon = menuHamburger.querySelector('i');
+                if (navMenu.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-xmark');
+                } else {
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                }
+            });
+
+            // Fecha o menu ao clicar em algum link interno
+            document.querySelectorAll('.nav-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                    const icon = menuHamburger.querySelector('i');
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                });
+            });
+
+            // Alternância de Modo Claro / Escuro (Dark/Light Mode com LocalStorage)
+            const themeToggle = document.getElementById('themeToggle');
+            const htmlElement = document.documentElement;
+            const themeIcon = themeToggle.querySelector('i');
+
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            if (savedTheme === 'dark') {
+                htmlElement.classList.add('dark');
+                htmlElement.classList.remove('light');
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+            }
+
+            themeToggle.addEventListener('click', () => {
+                if (htmlElement.classList.contains('dark')) {
+                    htmlElement.classList.remove('dark');
+                    htmlElement.classList.add('light');
+                    localStorage.setItem('theme', 'light');
+                    themeIcon.classList.remove('fa-sun');
+                    themeIcon.classList.add('fa-moon');
+                } else {
+                    htmlElement.classList.remove('light');
+                    htmlElement.classList.add('dark');
+                    localStorage.setItem('theme', 'dark');
+                    themeIcon.classList.remove('fa-moon');
+                    themeIcon.classList.add('fa-sun');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
+```
