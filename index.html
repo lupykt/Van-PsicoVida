@@ -9,16 +9,21 @@
     <style>
         /* Variáveis de Cores e Configurações Gerais */
         :root {
-            --bg-primary: #fffefa;
-            --bg-secondary: #d6b99b;
-            --bg-card: #ffffff;
-            --text-primary: #2c2a29;
-            --text-secondary: #6e6865;
-            --accent-color: #c65f1a;
-            --accent-hover: #a84c12;
+            --bg-primary: #fbfaf6;
+            --bg-secondary: #eeeae0;
+            --bg-about: #ddd8c8;
+            --bg-footer: #d3cebc;
+            --bg-card: #fffefa;
+            --text-primary: #36382f;
+            --text-secondary: #74756b;
+            --accent-color: #718268;
+            --accent-hover: #596a50;
             --accent-text: #ffffff;
-            --accent-soft: #f7e0d0;
-            --border-color: #c8a98b;
+            --accent-soft: #e8ede3;
+            --highlight-color: #e0ad32;
+            --highlight-soft: #fbf2d9;
+            --highlight-text: #5b4818;
+            --border-color: #d9d6c9;
             --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
             --transition: all 0.3s ease;
         }
@@ -26,14 +31,19 @@
         .dark {
             --bg-primary: #181716;
             --bg-secondary: #22201e;
+            --bg-about: #292a24;
+            --bg-footer: #252720;
             --bg-card: #2c2a29;
             --text-primary: #f4f0ec;
             --text-secondary: #b5afa9;
-            --accent-color: #f08a45;
-            --accent-hover: #ffa366;
-            --accent-text: #28220f;
-            --accent-soft: #3a2b22;
-            --border-color: #3b3835;
+            --accent-color: #a9b99c;
+            --accent-hover: #c0cfb4;
+            --accent-text: #22271f;
+            --accent-soft: #2d382b;
+            --highlight-color: #f0c75b;
+            --highlight-soft: #40371f;
+            --highlight-text: #f4e3b2;
+            --border-color: #41463b;
             --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
 
@@ -122,7 +132,7 @@
         }
 
         .logo span {
-            color: var(--accent-color);
+            color: var(--highlight-color);
         }
 
         .nav-menu {
@@ -190,14 +200,14 @@
 
         .badge {
             display: inline-block;
-            background-color: var(--accent-soft);
-            color: var(--accent-color);
+            background-color: var(--highlight-soft);
+            color: var(--highlight-text);
             padding: 0.4rem 1rem;
             border-radius: 20px;
             font-size: 0.85rem;
             font-weight: 600;
             margin-bottom: 1rem;
-            border: 1px solid var(--border-color);
+            border: 1px solid var(--highlight-color);
         }
 
         .hero-text h1 {
@@ -234,7 +244,7 @@
         /* Sobre Mim */
         .about {
             padding: 100px 0;
-            background-color: var(--bg-secondary);
+            background-color: var(--bg-about);
         }
 
         .about-container {
@@ -397,7 +407,7 @@
 
         /* Rodapé */
         .footer {
-            background-color: var(--bg-secondary);
+            background-color: var(--bg-footer);
             padding: 80px 0 30px;
             border-top: 1px solid var(--border-color);
         }
@@ -415,7 +425,7 @@
         }
 
         .footer-info h3 span {
-            color: var(--accent-color);
+            color: var(--highlight-color);
         }
 
         .footer-info p {
