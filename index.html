@@ -9,14 +9,16 @@
     <style>
         /* Variáveis de Cores e Configurações Gerais */
         :root {
-            --bg-primary: #fcfbfa;
-            --bg-secondary: #f4f0ec;
+            --bg-primary: #fffefa;
+            --bg-secondary: #d6b99b;
             --bg-card: #ffffff;
             --text-primary: #2c2a29;
             --text-secondary: #6e6865;
-            --accent-color: #7d6b5d;
-            --accent-hover: #635347;
-            --border-color: #e3ded8;
+            --accent-color: #c65f1a;
+            --accent-hover: #a84c12;
+            --accent-text: #ffffff;
+            --accent-soft: #f7e0d0;
+            --border-color: #c8a98b;
             --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
             --transition: all 0.3s ease;
         }
@@ -27,8 +29,10 @@
             --bg-card: #2c2a29;
             --text-primary: #f4f0ec;
             --text-secondary: #b5afa9;
-            --accent-color: #a49182;
-            --accent-hover: #bda897;
+            --accent-color: #f08a45;
+            --accent-hover: #ffa366;
+            --accent-text: #28220f;
+            --accent-soft: #3a2b22;
             --border-color: #3b3835;
             --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
@@ -57,7 +61,7 @@
         /* Botões */
         .btn-primary {
             background-color: var(--accent-color);
-            color: #fff;
+            color: var(--accent-text);
             padding: 0.75rem 1.5rem;
             border-radius: 30px;
             text-decoration: none;
@@ -87,7 +91,7 @@
 
         .btn-secondary:hover {
             background-color: var(--accent-color);
-            color: #fff;
+            color: var(--accent-text);
             transform: translateY(-2px);
         }
 
@@ -186,7 +190,7 @@
 
         .badge {
             display: inline-block;
-            background-color: var(--bg-secondary);
+            background-color: var(--accent-soft);
             color: var(--accent-color);
             padding: 0.4rem 1rem;
             border-radius: 20px;
@@ -371,7 +375,7 @@
         .icon-box {
             width: 70px;
             height: 70px;
-            background-color: var(--bg-secondary);
+            background-color: var(--accent-soft);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -473,7 +477,7 @@
 
         .social-icons a:hover {
             background-color: var(--accent-color);
-            color: #fff;
+            color: var(--accent-text);
             border-color: var(--accent-color);
         }
 
@@ -577,7 +581,6 @@
                 <button id="themeToggle" class="theme-btn" aria-label="Alternar modo escuro/claro">
                     <i class="fa-solid fa-moon"></i>
                 </button>
-                <a href="https://wa.me/5511982073795?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20atendimentos." target="_blank" class="btn-primary cta-desktop">Fale Conosco</a>
                 <button class="menu-hamburger" id="menuHamburger" aria-label="Menu">
                     <i class="fa-solid fa-bars"></i>
                 </button>
@@ -593,12 +596,11 @@
                 <h1>Cuidando da sua saúde mental com acolhimento e excelência</h1>
                 <p>Um espaço seguro para o seu autoconhecimento, desenvolvimento emocional e ressignificação de histórias.</p>
                 <div class="hero-buttons">
-                    <a href="https://wa.me/5511982073795?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" class="btn-primary">Agendar Consulta</a>
                     <a href="#sobre" class="btn-secondary">Conhecer a Psicóloga</a>
                 </div>
             </div>
             <div class="hero-image">
-                <img src="IMG/Foto Topo.jpg" alt="Consultório Van PsicoVida" />
+                <img src="IMG/Foto Início.jpeg" alt="Consultório Van PsicoVida" />
             </div>
         </div>
     </section>
@@ -611,8 +613,11 @@
             </div>
             <div class="about-text">
                 <h2>Sobre Mim</h2>
-                <p class="highlight-quote">"Prazer, Sou Vanessa Pina, sua psicóloga. Amo Psicologia e atuar com Psicoterapia Individual me faz feliz a cada dia."</p>
-                <p>Nas sessões ouço, oriento, acompanho e trato pessoas com diversas situações de alma à resolver. Atuo em Psicoterapia há mais de 14 anos e realizo atendimentos particulares 100% on-line.</p>
+                <p class="highlight-quote">Prazer, sou Vanessa Pina, psicóloga clínica, casada, mãe de um casal de filhos e cristã.</p>
+                <p>Atuo há mais de 14 anos na Psicologia, oferecendo atendimento psicológico com acolhimento, ética e respeito à singularidade de cada pessoa.</p>
+                <p>Meu trabalho é voltado ao cuidado com a saúde emocional, proporcionando um espaço de escuta, reflexão e autoconhecimento, no qual você possa compreender seus sentimentos, enfrentar desafios e desenvolver recursos para lidar com as diferentes situações da vida.</p>
+                <p>Trabalho com as abordagens Terapia Cognitivo-Comportamental (TCC) e Psicologia Existencial-Humanista, considerando a história, as necessidades e as experiências individuais de cada paciente.</p>
+                <p>Será um prazer acompanhar você nessa jornada de autoconhecimento e desenvolvimento pessoal.</p>
                 <div class="crp-info">
                     <i class="fa-solid fa-id-card"></i>
                     <span>Vanessa Sena Pina Miranda | <strong>CRP 55819</strong></span>
@@ -621,23 +626,23 @@
         </div>
     </section>
 
-    <!-- Propósito e Benefícios -->
+    <!-- Abordagens Psicológicas -->
     <section id="abordagem" class="purpose">
         <div class="container">
             <div class="section-title">
-                <h2>Propósito e Benefícios</h2>
-                <p>Por que a psicoterapia é fundamental para a sua jornada?</p>
+                <h2>Abordagens Psicológicas</h2>
+                <p>O atendimento considera a singularidade, os pensamentos, as emoções e as experiências de cada pessoa, em um espaço de escuta e acolhimento.</p>
             </div>
             <div class="purpose-grid">
                 <div class="purpose-card">
                     <i class="fa-solid fa-heart-pulse"></i>
-                    <h3>Apoio Emocional Especializado</h3>
-                    <p>A Psicoterapia auxilia as pessoas a lidarem com problemas emocionais, comportamentais, ansiedade, estresse e conflitos internos, promovendo clareza mental e autoconhecimento profundo.</p>
+                    <h3>Terapia Cognitivo-Comportamental (TCC)</h3>
+                    <p>Ajuda a identificar padrões de pensamentos e comportamentos e a desenvolver estratégias para lidar com os desafios do cotidiano.</p>
                 </div>
                 <div class="purpose-card">
                     <i class="fa-solid fa-seedling"></i>
-                    <h3>Equilíbrio e Bem-Estar</h3>
-                    <p>Nota-se grande necessidade das pessoas em adquirir equilíbrio emocional para enfrentar os desafios cotidianos com mais leveza, resiliência e qualidade de vida.</p>
+                    <h3>Psicologia Existencial-Humanista</h3>
+                    <p>Valoriza a singularidade, as escolhas e os sentimentos de cada pessoa, acolhendo sua história e a busca por sentidos para a própria vida.</p>
                 </div>
             </div>
         </div>
@@ -659,8 +664,7 @@
                 <div class="service-card">
                     <div class="icon-box"><i class="fa-solid fa-laptop-medical"></i></div>
                     <h3>Atendimento 100% On-line</h3>
-                    <p>Horário de atendimento: 07:00 às 18:00.</p>
-                    <p>Atendimentos realizados com privacidade e conforto pela internet, a partir de qualquer lugar.</p>
+                    <p>Atendimentos particulares 100% on-line, com horários flexíveis, incluindo <strong>períodos noturnos e aos sábados</strong>, para facilitar o cuidado com sua saúde emocional.</p>
                 </div>
                 <div class="service-card">
                     <div class="icon-box"><i class="fa-solid fa-award"></i></div>
